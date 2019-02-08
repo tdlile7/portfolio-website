@@ -1,6 +1,11 @@
-nav, #landing, footer {
+nav, #landing, #contact, footer {
   display: flex;
   justify-content: center;
+  align-items: center; }
+
+#contact #contact-form {
+  display: flex;
+  flex-direction: column;
   align-items: center; }
 
 @keyframes fade-down {
@@ -86,6 +91,38 @@ nav {
 #projects {
   height: 30vh;
   background: grey; }
+
+#contact {
+  height: 85vh;
+  border-top: 2px solid #363535; }
+  #contact #contact-image {
+    width: 40vw;
+    height: 70%;
+    background-image: url("images/contact-image.jpg");
+    background-size: cover;
+    margin-left: 5vw; }
+  #contact #contact-form {
+    width: 60vw; }
+    #contact #contact-form label {
+      align-self: flex-start; }
+    #contact #contact-form input {
+      height: 7.5vh;
+      width: 25vw;
+      margin: 10px 0;
+      font-size: 1.5rem; }
+    #contact #contact-form textarea {
+      height: 15vh;
+      width: 25vw;
+      font-size: 1.5rem; }
+    #contact #contact-form #submit-btn {
+      height: 7.5vh;
+      width: 15vw;
+      margin-top: 10px;
+      margin-left: -10vw;
+      background: #1c7dec;
+      color: white; }
+      #contact #contact-form #submit-btn:focus {
+        outline: none; }
 
 footer {
   position: relative;

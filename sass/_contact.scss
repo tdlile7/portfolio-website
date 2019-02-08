@@ -1,0 +1,48 @@
+#contact {
+  height: 85vh;
+  @extend %default-flex-settings;
+  border-top: 2px solid rgb(54, 53, 53);
+
+  #contact-image {
+    width: 40vw;
+    height: 70%;
+    background-image: url("images/contact-image.jpg");
+    background-size: cover;
+    margin-left: 5vw;
+  }
+
+  #contact-form {
+    width: 60vw;
+    @extend %column-flex-settings;
+
+    label {
+      align-self: flex-start;
+    }
+
+    input {
+      height: 7.5vh;
+      width: 25vw;
+      margin: 10px 0;
+      font-size: 1.5rem;
+    }
+
+    textarea {
+      height: 15vh;
+      width: 25vw;
+      font-size: 1.5rem;
+    }
+
+    #submit-btn {
+      height: 7.5vh;
+      width: 15vw;
+      margin-top: 10px;
+      margin-left: -10vw;
+      background: rgb(28, 125, 236);
+      color: white;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
