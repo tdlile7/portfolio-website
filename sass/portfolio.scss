@@ -1,0 +1,44 @@
+// -----------------Mixins---------------------------
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+// -----------------Variables---------------------------
+$green: #4caf50;
+
+// -----------------Extensions---------------------------
+%default-flex-settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// -----------------Keyframes------------------------
+@keyframes fade-down {
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@keyframes slidefade {
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+/*-----------Partials-------------*/
+@import "general";
+
+@import "nav";
+
+@import "landing";
+
+@import "about";
+
+@import "projects";
+
+@import "footer";

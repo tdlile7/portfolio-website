@@ -1,0 +1,46 @@
+nav {
+  height: 30vh;
+  background: transparent;
+  @extend %default-flex-settings;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    font: 1.35rem;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.75rem;
+    opacity: 0;
+    animation: 1.25s fade-down ease-out 1.25s forwards;
+    margin-top: -10vh;
+  }
+
+  a:before,
+  a:after {
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: "";
+    background: #fff;
+    transition: all 0.3s;
+  }
+
+  a:before {
+    left: 0px;
+    top: 0px;
+  }
+
+  a:after {
+    right: 0px;
+    bottom: 0px;
+  }
+
+  a:hover:before,
+  a:hover:after {
+    opacity: 1;
+    width: 100%;
+  }
+}

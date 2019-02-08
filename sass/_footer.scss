@@ -1,0 +1,11 @@
+footer {
+  position: relative;
+  height: 10vh;
+  @extend %default-flex-settings;
+  background: rgb(67, 67, 155);
+  border-top: 1px solid white;
+}
+
+h3 {
+  color: white;
+}
