@@ -1,4 +1,123 @@
 #projects {
-  height: 30vh;
-  background: grey;
+  height: 100vh;
+  background: black;
+  border-top: 2px solid rgb(92, 92, 92);
+
+  .grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+
+    .grid-item {
+      @extend %column-flex-settings;
+      justify-content: center;
+      opacity: 0;
+      color: white;
+
+      .project-options {
+        @extend %default-flex-settings;
+        margin-top: 20px;
+        height: 15%;
+        width: 40%;
+
+        a {
+          flex: 1;
+          height: 100%;
+          margin: 0 7.5px;
+
+          button {
+            height: 100%;
+            width: 100%;
+            border: 1px solid rgb(9, 9, 245);
+            border-radius: 7.5px;
+            transition: all 0.3s;
+            outline: none;
+
+            &:hover {
+              background: rgb(47, 131, 228);
+              cursor: pointer;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+
+    .grid-item:nth-child(1) {
+      background-image: url("images/todolist.jpg");
+      background-size: cover;
+      animation: 2s fade-left forwards;
+      grid-column: 1/3;
+      grid-row: 1/4;
+
+      h2 {
+        font-size: 2.5rem;
+        margin: 5px 0;
+      }
+    }
+
+    .grid-item:nth-child(2) {
+      background-image: url("images/landing.jpg");
+      background-size: cover;
+      animation: 2s fade-top forwards;
+    }
+
+    .grid-item:nth-child(3) {
+      background-image: url("images/landing.jpg");
+      background-size: cover;
+      animation: 2s fade-bottom forwards;
+    }
+
+    .grid-item:nth-child(4) {
+      background-image: url("images/landing.jpg");
+      background-size: cover;
+      animation: 2s fade-right forwards;
+    }
+  }
+}
+
+@keyframes fade-left {
+  from {
+    transform: translateX(-225px);
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-top {
+  from {
+    transform: translateY(-225px);
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-bottom {
+  from {
+    transform: translateY(225px);
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-right {
+  from {
+    transform: translateX(225px);
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

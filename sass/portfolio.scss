@@ -22,10 +22,10 @@ $green: #4caf50;
 }
 
 // -----------------Keyframes------------------------
-@keyframes fade-down {
+@keyframes fade-in {
   100% {
     opacity: 1;
-    margin-top: 0;
+    margin: 0;
   }
 }
 

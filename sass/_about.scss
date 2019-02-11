@@ -1,4 +1,54 @@
 #about {
-  height: 80vh;
-  background-image: linear-gradient(to top left, #ff9200 50%, #000000 50%);
+  height: 100vh;
+  display: flex;
+
+  div {
+    height: 100%;
+  }
+
+  .description {
+    flex: 1;
+    background: rgb(171, 246, 248);
+    @extend %default-flex-settings;
+  }
+
+  .hobbies {
+    display: grid;
+    flex: 1.5;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .hobby {
+      @extend %default-flex-settings;
+    }
+
+    .hobby:nth-child(1) {
+      background-image: url("images/food.jpg");
+      background-size: cover;
+    }
+
+    .hobby:nth-child(2) {
+      background-image: url("images/japan.jpg");
+      background-size: cover;
+    }
+
+    .hobby:nth-child(3) {
+      background-image: url("images/video-games.jpg");
+      background-size: cover;
+    }
+
+    .hobby:nth-child(4) {
+      background-image: url("images/gym.jpg");
+      background-size: cover;
+    }
+
+    .hobby:nth-child(5) {
+      background-image: url("images/headphones.jpg");
+      background-size: cover;
+    }
+
+    .hobby:nth-child(6) {
+      background-image: url("images/sports.jpg");
+      background-size: cover;
+    }
+  }
 }

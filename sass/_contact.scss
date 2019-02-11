@@ -1,14 +1,18 @@
 #contact {
-  height: 85vh;
+  height: 90vh;
   @extend %default-flex-settings;
-  border-top: 2px solid rgb(54, 53, 53);
+  border-top: 2px solid rgb(92, 92, 92);
+  position: relative;
 
-  #contact-image {
-    width: 40vw;
-    height: 70%;
-    background-image: url("images/contact-image.jpg");
+  .background-image {
+    background-image: url("images/contact.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover;
-    margin-left: 5vw;
+    z-index: -1;
   }
 
   #contact-form {
