@@ -21,21 +21,6 @@ $green: #4caf50;
   align-items: center;
 }
 
-// -----------------Keyframes------------------------
-@keyframes fade-in {
-  100% {
-    opacity: 1;
-    margin: 0;
-  }
-}
-
-@keyframes slidefade {
-  100% {
-    opacity: 1;
-    margin-left: 0;
-  }
-}
-
 /*-----------Partials-------------*/
 @import "general";
 

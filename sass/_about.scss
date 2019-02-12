@@ -1,54 +1,69 @@
 #about {
   height: 100vh;
   display: flex;
+  border-top: 2px solid rgb(0, 0, 0);
+  position: relative;
 
-  div {
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    background-size: cover;
+    z-index: -1;
+    background-image: url("images/about-me.jpg");
+  }
+
+  .image {
+    flex: 1;
+    @extend %column-flex-settings;
     height: 100%;
+    color: white;
+
+    h2 {
+      font-size: 4rem;
+      margin-top: 30px;
+      border-bottom: 5px solid white;
+    }
+
+    i {
+      font-size: 6rem;
+      margin: 20px 0;
+      transform: skewX(10deg);
+    }
+
+    img {
+      height: 47.5%;
+      width: 80%;
+      border: 2px solid black;
+      border-radius: 10px;
+    }
   }
 
   .description {
-    flex: 1;
-    background: rgb(171, 246, 248);
-    @extend %default-flex-settings;
-  }
+    flex: 1.25;
+    align-self: center;
+    height: 80%;
+    // background: rgb(234, 246, 247);
+    @extend %column-flex-settings;
+    justify-content: center;
+    color: rgb(245, 244, 244);
 
-  .hobbies {
-    display: grid;
-    flex: 1.5;
-    grid-template-columns: 1fr 1fr 1fr;
-
-    .hobby {
-      @extend %default-flex-settings;
+    p {
+      flex: 1;
+      width: 90%;
+      font-size: 1.25rem;
+      line-height: 40px;
+      background: grey;
+      border: 2px solid black;
+      border-radius: 20px;
+      padding: 15px;
     }
 
-    .hobby:nth-child(1) {
-      background-image: url("images/food.jpg");
-      background-size: cover;
-    }
-
-    .hobby:nth-child(2) {
-      background-image: url("images/japan.jpg");
-      background-size: cover;
-    }
-
-    .hobby:nth-child(3) {
-      background-image: url("images/video-games.jpg");
-      background-size: cover;
-    }
-
-    .hobby:nth-child(4) {
-      background-image: url("images/gym.jpg");
-      background-size: cover;
-    }
-
-    .hobby:nth-child(5) {
-      background-image: url("images/headphones.jpg");
-      background-size: cover;
-    }
-
-    .hobby:nth-child(6) {
-      background-image: url("images/sports.jpg");
-      background-size: cover;
+    p:first-child {
+      margin-bottom: 5px;
     }
   }
 }

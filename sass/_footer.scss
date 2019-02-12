@@ -1,11 +1,22 @@
 footer {
   position: relative;
-  height: 10vh;
-  @extend %default-flex-settings;
-  background: rgb(67, 67, 155);
+  height: 20vh;
+  @extend %column-flex-settings;
+  justify-content: center;
+  background: rgb(43, 43, 48);
   border-top: 1px solid white;
-}
-
-h3 {
   color: white;
+
+  h5 {
+    margin-top: 12.5px;
+
+    a {
+      color: rgb(75, 77, 238);
+      text-decoration: none;
+
+      &:hover {
+        color: rgb(66, 187, 243);
+      }
+    }
+  }
 }
