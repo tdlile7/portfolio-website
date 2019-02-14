@@ -1,10 +1,7 @@
-nav {
-  height: 40vh;
+#nav {
   background: transparent;
   @extend %column-flex-settings;
-  justify-content: flex-end;
-  // align-items: flex-end;
-  overflow: hidden;
+  justify-content: flex-start;
 
   .nav-collapse {
     border-radius: 10px;
@@ -29,18 +26,41 @@ nav {
     }
   }
 
-  a {
-    // display: none;
-    color: #fff;
-    text-decoration: none;
-    margin: 2px 0;
+  .nav-items {
+    height: 35vh;
+    width: 90vw;
+    margin-top: 10px;
+    background: black;
+    border-radius: 5px;
+    @extend %column-flex-settings;
+
+    a {
+      color: white;
+      text-decoration: none;
+      margin: 5px 0;
+      font-size: 1.5rem;
+
+      &:hover {
+        font-size: 1.75rem;
+        color: rgb(0, 162, 255);
+      }
+    }
+  }
+
+  .hide {
+    opacity: 0;
+    transition: 0.5s all linear 0.5s;
+  }
+
+  .show {
+    opacity: 1;
+    transition: 1s all ease-in-out 0.5s;
   }
 }
 
 // -----------------Media Queries------------------------
 @media only screen and (min-width: 768px) {
-  nav {
-    height: 20vh;
+  #nav {
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
@@ -49,56 +69,92 @@ nav {
       display: none;
     }
 
-    a {
-      display: inline-block;
-      margin: 0px 10px;
-      padding: 10px 10px;
-      position: relative;
-      cursor: pointer;
-      font-size: 1.5rem;
-    }
-
-    a:before,
-    a:after {
-      position: absolute;
-      opacity: 0;
-      width: 0%;
-      height: 2px;
-      content: "";
-      background: #fff;
-      transition: all 0.3s;
-    }
-
-    a:before {
-      left: 0px;
-      top: 0px;
-    }
-
-    a:after {
-      right: 0px;
-      bottom: 0px;
-    }
-
-    a:hover:before,
-    a:hover:after {
-      opacity: 1;
+    .nav-items {
+      height: 100%;
       width: 100%;
+      margin: 0;
+      background: transparent;
+      flex-direction: row;
+      align-items: flex-end;
+
+      a {
+        color: white;
+        display: inline-block;
+        margin: 0px 10px;
+        padding: 10px 10px;
+        position: relative;
+        cursor: pointer;
+        font-size: 1.5rem;
+
+        &:hover {
+          color: white;
+          font-size: 1.5rem;
+        }
+      }
+
+      a:before,
+      a:after {
+        position: absolute;
+        opacity: 0;
+        width: 0%;
+        height: 2px;
+        content: "";
+        background: #fff;
+        transition: all 0.3s;
+      }
+
+      a:before {
+        left: 0px;
+        top: 0px;
+      }
+
+      a:after {
+        right: 0px;
+        bottom: 0px;
+      }
+
+      a:hover:before,
+      a:hover:after {
+        opacity: 1;
+        width: 100%;
+      }
+    }
+
+    .hide {
+      opacity: 1;
+    }
+
+    .show {
+      transform: none;
+      transition: none;
     }
   }
 }
 
 @media only screen and (min-width: 992px) {
-  nav {
-    a {
-      font-size: 1.75rem;
+  #nav {
+    .nav-items {
+      a {
+        font-size: 1.75rem;
+
+        &:hover {
+          font-size: 1.75rem;
+        }
+      }
     }
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  nav {
-    a {
-      font-size: 2rem;
+  #nav {
+    .nav-items {
+      a {
+        font-size: 2rem;
+
+        &:hover {
+          font-size: 2rem;
+        }
+      }
     }
   }
 }

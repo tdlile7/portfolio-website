@@ -1,9 +1,9 @@
-#landing #social-media, #projects .grid .grid-item .project-options, #contact, #contact form .header, #contact form label {
+#landing-content #social-media, #projects .grid .grid-item .project-options, #contact, #contact form .header, #contact form label {
   display: flex;
   justify-content: center;
   align-items: center; }
 
-nav, #landing, #about .image, #about .description, #projects .grid .grid-item, footer {
+#landing, #nav, #nav .nav-items, #landing-content, #about .image, #about .description, #projects .grid .grid-item, footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,73 +24,120 @@ html {
 
 @media only screen and (min-width: 1200px) {
   font-size: 16px; }
-nav {
-  height: 40vh;
-  background: transparent;
-  justify-content: flex-end;
+#landing {
+  max-height: 100vh;
+  max-width: 100vw;
   overflow: hidden; }
-  nav .nav-collapse {
+  #landing #nav {
+    height: 55vh;
+    width: 100vw;
+    order: 2;
+    overflow: hidden; }
+  #landing #landing-content {
+    height: 45vh;
+    width: 100vw;
+    order: 1;
+    overflow: hidden; }
+
+#nav {
+  background: transparent;
+  justify-content: flex-start; }
+  #nav .nav-collapse {
     border-radius: 10px;
     background: #b1b0b0;
     border: 2px solid black; }
-    nav .nav-collapse:focus {
+    #nav .nav-collapse:focus {
       outline: none; }
-    nav .nav-collapse:active {
+    #nav .nav-collapse:active {
       border: 1px solid black; }
-    nav .nav-collapse i {
+    #nav .nav-collapse i {
       font-size: 2rem;
       padding: 20px 30px; }
-      nav .nav-collapse i:hover {
+      #nav .nav-collapse i:hover {
         cursor: pointer; }
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 2px 0; }
+  #nav .nav-items {
+    height: 35vh;
+    width: 90vw;
+    margin-top: 10px;
+    background: black;
+    border-radius: 5px; }
+    #nav .nav-items a {
+      color: white;
+      text-decoration: none;
+      margin: 5px 0;
+      font-size: 1.5rem; }
+      #nav .nav-items a:hover {
+        font-size: 1.75rem;
+        color: #00a2ff; }
+  #nav .hide {
+    opacity: 0;
+    transition: 0.5s all linear 0.5s; }
+  #nav .show {
+    opacity: 1;
+    transition: 1s all ease-in-out 0.5s; }
 
 @media only screen and (min-width: 768px) {
-  nav {
-    height: 20vh;
+  #nav {
     flex-direction: row;
     justify-content: center;
     align-items: flex-end; }
-    nav .nav-collapse {
+    #nav .nav-collapse {
       display: none; }
-    nav a {
-      display: inline-block;
-      margin: 0px 10px;
-      padding: 10px 10px;
-      position: relative;
-      cursor: pointer;
-      font-size: 1.5rem; }
-    nav a:before,
-    nav a:after {
-      position: absolute;
-      opacity: 0;
-      width: 0%;
-      height: 2px;
-      content: "";
-      background: #fff;
-      transition: all 0.3s; }
-    nav a:before {
-      left: 0px;
-      top: 0px; }
-    nav a:after {
-      right: 0px;
-      bottom: 0px; }
-    nav a:hover:before,
-    nav a:hover:after {
-      opacity: 1;
-      width: 100%; } }
+    #nav .nav-items {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      background: transparent;
+      flex-direction: row;
+      align-items: flex-end; }
+      #nav .nav-items a {
+        color: white;
+        display: inline-block;
+        margin: 0px 10px;
+        padding: 10px 10px;
+        position: relative;
+        cursor: pointer;
+        font-size: 1.5rem; }
+        #nav .nav-items a:hover {
+          color: white;
+          font-size: 1.5rem; }
+      #nav .nav-items a:before,
+      #nav .nav-items a:after {
+        position: absolute;
+        opacity: 0;
+        width: 0%;
+        height: 2px;
+        content: "";
+        background: #fff;
+        transition: all 0.3s; }
+      #nav .nav-items a:before {
+        left: 0px;
+        top: 0px; }
+      #nav .nav-items a:after {
+        right: 0px;
+        bottom: 0px; }
+      #nav .nav-items a:hover:before,
+      #nav .nav-items a:hover:after {
+        opacity: 1;
+        width: 100%; }
+    #nav .hide {
+      opacity: 1; }
+    #nav .show {
+      transform: none;
+      transition: none; } }
 @media only screen and (min-width: 992px) {
-  nav a {
-    font-size: 1.75rem; } }
+  #nav .nav-items a {
+    font-size: 1.75rem; }
+    #nav .nav-items a:hover {
+      font-size: 1.75rem; } }
 @media only screen and (min-width: 1200px) {
-  nav a {
-    font-size: 2rem; } }
-#landing {
-  height: 60vh;
-  overflow: hidden; }
-  #landing .background-image {
+  #nav .nav-items a {
+    font-size: 2rem; }
+    #nav .nav-items a:hover {
+      font-size: 2rem; } }
+#landing-content {
+  justify-content: flex-end; }
+  #landing-content .background-image {
     position: absolute;
     top: 0;
     left: 0;
@@ -100,75 +147,82 @@ nav {
     z-index: -1;
     opacity: 0.85;
     background-image: url("images/landing.jpg"); }
-  #landing h2 {
+  #landing-content h2 {
     font-size: 1.5rem;
     text-align: center;
     color: white;
     margin: none; }
-  #landing #social-media {
+  #landing-content #social-media {
     margin: 20px 0;
     height: 20vh;
     width: 20vw; }
-    #landing #social-media a {
+    #landing-content #social-media a {
       margin: 0 7.5px; }
-      #landing #social-media a i {
+      #landing-content #social-media a i {
         font-size: 1.5rem;
         color: white;
         padding: 20px;
         border-radius: 45px;
         border: 2px solid white;
         transition: all 0.25s; }
-        #landing #social-media a i:hover {
+        #landing-content #social-media a i:hover {
           font-size: 2rem; }
-      #landing #social-media a .fa-linkedin-in {
+      #landing-content #social-media a .fa-linkedin-in {
         background: #007bb6; }
-        #landing #social-media a .fa-linkedin-in:hover {
+        #landing-content #social-media a .fa-linkedin-in:hover {
           background: white;
           color: #007bb6;
           border-color: #007bb6; }
-      #landing #social-media a .fa-facebook-f {
+      #landing-content #social-media a .fa-facebook-f {
         background: #3b5998;
         padding: 20px 27.5px; }
-        #landing #social-media a .fa-facebook-f:hover {
+        #landing-content #social-media a .fa-facebook-f:hover {
           background: white;
           color: #3b5998;
           border-color: #3b5998; }
-      #landing #social-media a .fa-github {
+      #landing-content #social-media a .fa-github {
         background: #444; }
-        #landing #social-media a .fa-github:hover {
+        #landing-content #social-media a .fa-github:hover {
           background: white;
           color: #444;
           border-color: #444; }
-      #landing #social-media a .fa-envelope {
+      #landing-content #social-media a .fa-envelope {
         background: #c71610; }
-        #landing #social-media a .fa-envelope:hover {
+        #landing-content #social-media a .fa-envelope:hover {
           background: white;
           color: #c71610;
           border-color: #c71610; }
 
 @media only screen and (min-width: 768px) {
-  #landing {
-    height: 80vh; }
-    #landing h2 {
+  #landing-content {
+    justify-content: center; }
+    #landing-content h2 {
       font-size: 2rem; }
-    #landing #social-media a i {
+    #landing-content #social-media a i {
       font-size: 1.75rem; }
-      #landing #social-media a i:hover {
+      #landing-content #social-media a i:hover {
         font-size: 2.25rem; } }
 @media only screen and (min-width: 992px) {
-  #landing h2 {
+  #landing-content h2 {
     font-size: 2.5rem; }
-  #landing #social-media a i {
+  #landing-content #social-media a i {
     font-size: 2rem; }
-    #landing #social-media a i:hover {
+    #landing-content #social-media a i:hover {
       font-size: 2.5rem; } }
 @media only screen and (min-width: 1200px) {
-  #landing h2 {
+  #landing-content h2 {
     font-size: 3rem; }
-  #landing #social-media a i {
+  #landing-content #social-media a i {
     font-size: 2.25rem; }
-    #landing #social-media a i:hover {
+    #landing-content #social-media a i:hover {
       font-size: 2.75rem; } }
+@media only screen and (min-width: 768px) {
+  #landing #nav {
+    height: 20vh;
+    order: 1; }
+  #landing #landing-content {
+    height: 80vh;
+    order: 2; } }
 #about {
   height: 100vh;
   display: flex;
