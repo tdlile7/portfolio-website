@@ -1,5 +1,5 @@
 #landing {
-  height: 80vh;
+  height: 60vh;
   @extend %column-flex-settings;
   overflow: hidden;
 
@@ -16,7 +16,8 @@
   }
 
   h2 {
-    font-size: 3rem;
+    font-size: 1.5rem;
+    text-align: center;
     color: white;
     margin: none;
   }
@@ -31,7 +32,7 @@
       margin: 0 7.5px;
 
       i {
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: white;
         padding: 20px;
         border-radius: 45px;
@@ -39,7 +40,7 @@
         transition: all 0.25s;
 
         &:hover {
-          font-size: 2.5rem;
+          font-size: 2rem;
         }
       }
 
@@ -73,26 +74,79 @@
           border-color: #444;
         }
       }
+
+      .fa-envelope {
+        background: #c71610;
+
+        &:hover {
+          background: white;
+          color: #c71610;
+          border-color: #c71610;
+        }
+      }
     }
   }
 }
 
 // -----------------Media Queries------------------------
-// @media (max-width: 800px) {
-// 	.landing-content-area {
-// 		min-height: 600px;
-// 	}
-// 	.landing-content-area h1 {
-// 		font-size: 48px;
-// 	}
-// }
+@media only screen and (min-width: 768px) {
+  #landing {
+    height: 80vh;
 
-// @media (max-width: 800px) {
-// 	header {
-// 		padding: 20px 50px;
-// 		flex-direction: column;
-// 	}
-// 	header h2 {
-// 		margin-bottom: 15px;
-// 	}
-// }
+    h2 {
+      font-size: 2rem;
+    }
+
+    #social-media {
+      a {
+        i {
+          font-size: 1.75rem;
+
+          &:hover {
+            font-size: 2.25rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #landing {
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    #social-media {
+      a {
+        i {
+          font-size: 2rem;
+
+          &:hover {
+            font-size: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #landing {
+    h2 {
+      font-size: 3rem;
+    }
+
+    #social-media {
+      a {
+        i {
+          font-size: 2.25rem;
+
+          &:hover {
+            font-size: 2.75rem;
+          }
+        }
+      }
+    }
+  }
+}

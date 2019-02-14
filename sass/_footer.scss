@@ -1,6 +1,6 @@
 footer {
   position: relative;
-  height: 20vh;
+  height: 15vh;
   @extend %column-flex-settings;
   justify-content: center;
   background: rgb(43, 43, 48);
@@ -24,4 +24,14 @@ footer {
       }
     }
   }
+}
+
+// -----------------Media Queries------------------------
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 992px) {
+}
+
+@media only screen and (min-width: 1200px) {
 }

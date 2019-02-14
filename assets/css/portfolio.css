@@ -1,9 +1,9 @@
-nav, #landing #social-media, #projects .grid .grid-item .project-options, #contact, #contact form .header, #contact form label {
+#landing #social-media, #projects .grid .grid-item .project-options, #contact, #contact form .header, #contact form label {
   display: flex;
   justify-content: center;
   align-items: center; }
 
-#landing, #about .image, #about .description, #projects .grid .grid-item, footer {
+nav, #landing, #about .image, #about .description, #projects .grid .grid-item, footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,41 +25,70 @@ html {
 @media only screen and (min-width: 1200px) {
   font-size: 16px; }
 nav {
-  height: 20vh;
+  height: 40vh;
   background: transparent;
-  align-items: flex-end;
+  justify-content: flex-end;
   overflow: hidden; }
+  nav .nav-collapse {
+    border-radius: 10px;
+    background: #b1b0b0;
+    border: 2px solid black; }
+    nav .nav-collapse:focus {
+      outline: none; }
+    nav .nav-collapse:active {
+      border: 1px solid black; }
+    nav .nav-collapse i {
+      font-size: 2rem;
+      padding: 20px 30px; }
+      nav .nav-collapse i:hover {
+        cursor: pointer; }
   nav a {
     color: #fff;
     text-decoration: none;
-    font: 1.35rem;
-    margin: 0px 10px;
-    padding: 10px 10px;
-    position: relative;
-    cursor: pointer;
-    font-size: 1.75rem; }
-  nav a:before,
-  nav a:after {
-    position: absolute;
-    opacity: 0;
-    width: 0%;
-    height: 2px;
-    content: "";
-    background: #fff;
-    transition: all 0.3s; }
-  nav a:before {
-    left: 0px;
-    top: 0px; }
-  nav a:after {
-    right: 0px;
-    bottom: 0px; }
-  nav a:hover:before,
-  nav a:hover:after {
-    opacity: 1;
-    width: 100%; }
+    margin: 2px 0; }
 
+@media only screen and (min-width: 768px) {
+  nav {
+    height: 20vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end; }
+    nav .nav-collapse {
+      display: none; }
+    nav a {
+      display: inline-block;
+      margin: 0px 10px;
+      padding: 10px 10px;
+      position: relative;
+      cursor: pointer;
+      font-size: 1.5rem; }
+    nav a:before,
+    nav a:after {
+      position: absolute;
+      opacity: 0;
+      width: 0%;
+      height: 2px;
+      content: "";
+      background: #fff;
+      transition: all 0.3s; }
+    nav a:before {
+      left: 0px;
+      top: 0px; }
+    nav a:after {
+      right: 0px;
+      bottom: 0px; }
+    nav a:hover:before,
+    nav a:hover:after {
+      opacity: 1;
+      width: 100%; } }
+@media only screen and (min-width: 992px) {
+  nav a {
+    font-size: 1.75rem; } }
+@media only screen and (min-width: 1200px) {
+  nav a {
+    font-size: 2rem; } }
 #landing {
-  height: 80vh;
+  height: 60vh;
   overflow: hidden; }
   #landing .background-image {
     position: absolute;
@@ -72,7 +101,8 @@ nav {
     opacity: 0.85;
     background-image: url("images/landing.jpg"); }
   #landing h2 {
-    font-size: 3rem;
+    font-size: 1.5rem;
+    text-align: center;
     color: white;
     margin: none; }
   #landing #social-media {
@@ -82,14 +112,14 @@ nav {
     #landing #social-media a {
       margin: 0 7.5px; }
       #landing #social-media a i {
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: white;
         padding: 20px;
         border-radius: 45px;
         border: 2px solid white;
         transition: all 0.25s; }
         #landing #social-media a i:hover {
-          font-size: 2.5rem; }
+          font-size: 2rem; }
       #landing #social-media a .fa-linkedin-in {
         background: #007bb6; }
         #landing #social-media a .fa-linkedin-in:hover {
@@ -109,7 +139,36 @@ nav {
           background: white;
           color: #444;
           border-color: #444; }
+      #landing #social-media a .fa-envelope {
+        background: #c71610; }
+        #landing #social-media a .fa-envelope:hover {
+          background: white;
+          color: #c71610;
+          border-color: #c71610; }
 
+@media only screen and (min-width: 768px) {
+  #landing {
+    height: 80vh; }
+    #landing h2 {
+      font-size: 2rem; }
+    #landing #social-media a i {
+      font-size: 1.75rem; }
+      #landing #social-media a i:hover {
+        font-size: 2.25rem; } }
+@media only screen and (min-width: 992px) {
+  #landing h2 {
+    font-size: 2.5rem; }
+  #landing #social-media a i {
+    font-size: 2rem; }
+    #landing #social-media a i:hover {
+      font-size: 2.5rem; } }
+@media only screen and (min-width: 1200px) {
+  #landing h2 {
+    font-size: 3rem; }
+  #landing #social-media a i {
+    font-size: 2.25rem; }
+    #landing #social-media a i:hover {
+      font-size: 2.75rem; } }
 #about {
   height: 100vh;
   display: flex;
@@ -239,7 +298,7 @@ nav {
       background-size: cover; }
 
 #contact {
-  height: 80vh;
+  height: 85vh;
   border-top: 2px solid #5c5c5c;
   position: relative; }
   #contact .background-image {
@@ -263,13 +322,13 @@ nav {
       height: 7.5vh; }
       #contact form .header h2 {
         color: white;
-        font-size: 2rem;
+        font-size: 1.75rem;
         margin: 0;
         text-decoration: underline; }
       #contact form .header i {
         font-size: 3rem;
         color: white;
-        margin-left: 10px; }
+        margin: 10px 0 0 10px; }
         #contact form .header i:hover {
           color: #3b8edb;
           cursor: pointer; }
@@ -285,8 +344,8 @@ nav {
       font-weight: bold; }
     #contact form input {
       display: block;
-      height: 5vh;
-      width: 30vw;
+      height: 7.5vh;
+      width: 20vw;
       margin: 10px 0;
       font-size: 1rem;
       padding: 15px 5px;
@@ -295,8 +354,8 @@ nav {
         outline: none;
         border: 4px solid #242323; }
     #contact form textarea {
-      height: 11.5vh;
-      width: 60vw;
+      height: 15vh;
+      width: 35vw;
       font-size: 1rem;
       padding: 5px;
       border: 2px solid #242323; }
@@ -306,7 +365,7 @@ nav {
     #contact form button {
       height: 7.5vh;
       width: 15vw;
-      margin-top: 7.5px;
+      margin: 7.5px 0;
       font-size: 1rem;
       background: #1c7dec;
       color: white;
@@ -319,7 +378,7 @@ nav {
 
 footer {
   position: relative;
-  height: 20vh;
+  height: 15vh;
   justify-content: center;
   background: #2b2b30;
   border-top: 1px solid white;
