@@ -1,14 +1,14 @@
 #landing {
-  height: 75vh;
-  @extend %default-flex-settings;
+  height: 80vh;
+  @extend %column-flex-settings;
+  overflow: hidden;
 
   .background-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 100vh;
-    max-height: 100vh;
+    height: 100%;
     background-size: cover;
     z-index: -1;
     opacity: 0.85;
@@ -18,18 +18,62 @@
   h2 {
     font-size: 3rem;
     color: white;
-    align-self: flex-start;
-    opacity: 0;
-    margin: 15vh 0 0 -100px;
-    animation: 1.5s slidefade 0.5s forwards;
+    margin: none;
   }
-}
 
-// -----------------Keyframes------------------------
-@keyframes slidefade {
-  100% {
-    opacity: 1;
-    margin-left: 0;
+  #social-media {
+    margin: 20px 0;
+    height: 20vh;
+    width: 20vw;
+    @extend %default-flex-settings;
+
+    a {
+      margin: 0 7.5px;
+
+      i {
+        font-size: 2rem;
+        color: white;
+        padding: 20px;
+        border-radius: 45px;
+        border: 2px solid white;
+        transition: all 0.25s;
+
+        &:hover {
+          font-size: 2.5rem;
+        }
+      }
+
+      .fa-linkedin-in {
+        background: #007bb6;
+
+        &:hover {
+          background: white;
+          color: #007bb6;
+          border-color: #007bb6;
+        }
+      }
+
+      .fa-facebook-f {
+        background: #3b5998;
+        padding: 20px 27.5px;
+
+        &:hover {
+          background: white;
+          color: #3b5998;
+          border-color: #3b5998;
+        }
+      }
+
+      .fa-github {
+        background: #444;
+
+        &:hover {
+          background: white;
+          color: #444;
+          border-color: #444;
+        }
+      }
+    }
   }
 }
 

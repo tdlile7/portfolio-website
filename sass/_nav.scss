@@ -1,8 +1,9 @@
 nav {
-  height: 25vh;
+  height: 20vh;
   background: transparent;
   @extend %default-flex-settings;
   align-items: flex-end;
+  overflow: hidden;
 
   a {
     color: #fff;
@@ -13,8 +14,6 @@ nav {
     position: relative;
     cursor: pointer;
     font-size: 1.75rem;
-    opacity: 0;
-    animation: 1.5s fade-top ease-out 1s forwards;
   }
 
   a:before,
@@ -42,13 +41,5 @@ nav {
   a:hover:after {
     opacity: 1;
     width: 100%;
-  }
-}
-
-// -----------------Keyframes------------------------
-@keyframes fade-top {
-  100% {
-    opacity: 1;
-    margin-top: 0;
   }
 }

@@ -1,94 +1,135 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Thomas Lile Resume</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="assets/css/portfolio.css" />
-  </head>
-  <body>
-    <div id="portfolio">
-      <!-- ---------------------Navbar--------------------- -->
-      <nav>
-        <a href="#">HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#projects">PORTFOLIO</a>
-        <a href="#contact">CONTACT</a>
-        <a href="documents/thomas_lile_resume.docx" download
-          >RESUME <i class="fas fa-file-download"></i
-        ></a>
-      </nav>
-      <!-- ---------------------Landing--------------------- -->
-      <div id="landing">
-        <div class="background-image"></div>
-        <h2>Greetings, my name is Thomas</h2>
-      </div>
-
-      <!-- ---------------------About Me--------------------- -->
-      <div id="about">
-        <div class="background-image"></div>
-        <div class="image">
-          <h2>This Guy</h2>
-          <i class="fas fa-arrow-down"></i>
-          <img src="assets/css/images/profile-photo.png" alt="profile-photo" />
-        </div>
-        <div class="description">
-          <p>Highly motivated and self-driven individual, who has an immense passion for learning about new technologies within the web development space. Outside of programming, enjoys spending free time going to the gym, listening to podcasts, watching anime, and playing League of Legends. </p>
-          <p>Currently,  exploring opportunities to join highly motivated developing teams to contribute to novel applications. Most comfortable and experienced utilizing the MERN stack, but open and motivated to learning any new skills and/or technologies that the team would require. If you would like to reach me, you can find my contact information in the last section below. I look forward to hearing from you!</p>        
-        </div>
-      </div>
-
-      <!-- ---------------------Portfolio--------------------- -->
-      <div id="projects">
-        <div class="grid">
-          <div class="grid-item">
-            <h2>Workout Exercise Logger</h2>
-            <p>Built with React, Node, Express, MongoDB</p>
-            <div class="project-options">
-              <a href="#"><button>Website</button></a>
-              <a href="https://github.com/tdlile7/react-workout-logger"
-                ><button>Git</button></a
-              >
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Thomas Lile Resume</title>
+      <link
+         href="https://fonts.googleapis.com/css?family=Lato"
+         rel="stylesheet"
+         />
+      <link
+         rel="stylesheet"
+         href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+         crossorigin="anonymous"
+         />
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <link rel="stylesheet" href="assets/css/portfolio.css" />
+   </head>
+   <body>
+      <div id="portfolio">
+         <!-- ---------------------Navbar--------------------- -->
+         <!-- <button class="dropdown"></button> -->
+         <nav class="hide" data-aos="fade-down" data-aos-delay="250" data-aos-duration="800" data-aos-easing="ease-in-out">
+            <a href="#" >HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#projects">PORTFOLIO</a>
+            <a href="#contact">CONTACT</a>
+            <a href="documents/thomas_lile_resume.docx" download
+               >RESUME <i class="fas fa-file-download"></i
+               ></a>
+         </nav>
+         <!-- ---------------------Landing--------------------- -->
+         <div id="landing">
+            <div class="background-image"></div>
+            <h2 data-aos="fade-right" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">Greetings, my name is Thomas</h2>
+            <div id="social-media" data-aos="fade-up" data-aos-delay="250" data-aos-duration="800" data-aos-easing="ease-in-out">
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a> 
+                  <a href="#"><i class="fab fa-facebook-f"></i></a> 
+                  <a href="#"><i class="fab fa-github"></i></a>
             </div>
-          </div>
-          <div class="grid-item">
-            <h2>More Projects</h2>
-            <p>Coming Soon</p>
-          </div>
-          <div class="grid-item">
-            <h2>More Projects</h2>
-            <p>Coming Soon</p>
-          </div>
-          <div class="grid-item">
-            <h2>More Projects</h2>
-            <p>Coming Soon</p>
-          </div>
-        </div>
+         </div>
+         <!-- ---------------------About Me--------------------- -->
+         <div id="about">
+            <div class="background-image"></div>
+            <div class="image">
+               <h2>This Guy</h2>
+               <i class="fas fa-arrow-down"></i>
+               <img src="assets/css/images/profile-photo.png" alt="profile-photo" data-aos="fade-left" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true"/>
+            </div>
+            <div class="description">
+               <p>Highly motivated and self-driven individual, who has an immense passion for learning about new technologies within the web development space. Outside of programming, enjoys spending free time going to the gym, listening to podcasts, watching anime, and playing League of Legends. </p>
+               <p>Currently,  exploring opportunities to join highly motivated developing teams to contribute to novel applications. Most comfortable and experienced utilizing the MERN stack, but open and motivated to learning any new skills and/or technologies that teams would require. I look forward to hearing from you soon!</p>
+               <h2>Skills:</h2>
+               <ul id="skills"> 
+                     <li>React</li>
+                     <li>Javascript</li>
+                     <li>CSS</li>
+                     <li>HTML</li>
+                     <li>Node</li>
+                     <li>Express</li>
+                     <li>Mongoose</li>
+                     <li>MongoDB</li>
+                     <li>Git</li>
+                     <li>Bootstrap</li>
+                     <li>Sass</li>
+                     <li>AJAX</li>
+                     <li>Object Oriented Programming</li>
+                     <li>jQuery</li>
+                     <li>JSON</li>
+                     <li>Webpack</li>
+                     <li>Joi</li>
+               </ul>
+            </div>
+ 
+         </div>
+         <!-- ---------------------Portfolio--------------------- -->
+         <div id="projects">
+            <div class="grid">
+               <div class="grid-item" data-aos="fade-right" data-aos-delay="50" data-aos-duration="1250" data-aos-easing="ease-in-out" data-aos-once="true">
+                  <h3>In Progress</h2>
+                  <h2>Workout Exercise Logger</h2>
+                  <p>Built with React, Node, Express, MongoDB</p>
+                  <div class="project-options">
+                     <a href="https://github.com/tdlile7/react-workout-logger"
+                        ><button>Git</button></a
+                        >
+                  </div>
+               </div>
+               <div class="grid-item" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1250" data-aos-easing="ease-in-out" data-aos-once="true">
+                  <h2>More Projects</h2>
+                  <p>Coming Soon</p>
+               </div>
+               <div class="grid-item" data-aos="fade-left" data-aos-delay="50" data-aos-duration="1250" data-aos-easing="ease-in-out" data-aos-once="true">
+                  <h2>More Projects</h2>
+                  <p>Coming Soon</p>
+               </div>
+               <div class="grid-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1250" data-aos-easing="ease-in-out" data-aos-once="true">
+                  <h2>More Projects</h2>
+                  <p>Coming Soon</p>
+               </div>
+            </div>
+         </div>
+         <!-- ---------------------Contact Me--------------------- -->
+         <div id="contact">
+            <div class="background-image"></div>
+            <form>
+              <div class="header"><h2>Contact Me</h2><a href="#"><i class="fas fa-chevron-circle-up"></i></a></div>
+              <label for="name">Name:</label>
+              <input type="text" name="name">
+              <label for="email">Email:</label>
+              <input type="email" name="email">
+              <label for="phone">Phone:</label>
+              <input type="tel" name="phone">
+              <label for="details">Details:</label>
+              <textarea name="details" id="" cols="30" rows="10"></textarea>
+              <button>Send</button>
+            </form>
+         </div>
+         <!-- ---------------Footer---------------- -->
+         <footer>
+            <h3>Designed and coded by Thomas Lile</h3>
+            <h5>
+            Background images provided by:
+            <a href="https://www.pexels.com/">Pexels</a>
+            </h4>
+         </footer>
       </div>
-
-      <!-- ---------------------Contact Me--------------------- -->
-      <div id="contact">
-        <div class="background-image"></div>
-      </div>
-      <!-- ---------------Footer---------------- -->
-      <footer>
-        <h3>Designed and coded by Thomas Lile</h3>
-        <h5>
-          Background images provided by:
-          <a href="https://www.pexels.com/">Pexels</a>
-        </h4>
-      </footer>
-    </div>
-    <script type="text/javascript" src="assets/js/portfolio.js"></script>
-  </body>
+      <script type="text/javascript" src="assets/js/portfolio.js"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+         AOS.init();
+      </script>
+   </body>
 </html>
