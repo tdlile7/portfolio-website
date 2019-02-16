@@ -3,39 +3,39 @@
   justify-content: flex-end;
 
   .background-image {
+    opacity: 0.85;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
+    width: 100%;
+    background-image: url("images/landing.jpg");
     background-size: cover;
     z-index: -1;
-    opacity: 0.85;
-    background-image: url("images/landing.jpg");
   }
 
   h2 {
+    margin: none;
+    color: white;
     font-size: 1.5rem;
     text-align: center;
-    color: white;
-    margin: none;
   }
 
   #social-media {
-    margin: 20px 0;
+    @extend %default-flex-settings;
     height: 20vh;
     width: 20vw;
-    @extend %default-flex-settings;
+    margin: 20px 0;
 
     a {
       margin: 0 7.5px;
 
       i {
-        font-size: 1.5rem;
-        color: white;
         padding: 20px;
+        color: $white;
+        font-size: 1.5rem;
+        border: 2px solid $white;
         border-radius: 45px;
-        border: 2px solid white;
         transition: all 0.25s;
 
         &:hover {
@@ -44,43 +44,43 @@
       }
 
       .fa-linkedin-in {
-        background: #007bb6;
+        background: $linkedinBlue;
 
         &:hover {
-          background: white;
-          color: #007bb6;
-          border-color: #007bb6;
+          background: $white;
+          color: $linkedinBlue;
+          border-color: $linkedinBlue;
         }
       }
 
       .fa-facebook-f {
-        background: #3b5998;
+        background: $facebookBlue;
         padding: 20px 27.5px;
 
         &:hover {
-          background: white;
-          color: #3b5998;
-          border-color: #3b5998;
+          background: $white;
+          color: $facebookBlue;
+          border-color: $facebookBlue;
         }
       }
 
       .fa-github {
-        background: #444;
+        background: $githubGrey;
 
         &:hover {
-          background: white;
-          color: #444;
-          border-color: #444;
+          background: $white;
+          color: $githubGrey;
+          border-color: $githubGrey;
         }
       }
 
       .fa-envelope {
-        background: #c71610;
+        background: $gmailRed;
 
         &:hover {
-          background: white;
-          color: #c71610;
-          border-color: #c71610;
+          background: $white;
+          color: $gmailRed;
+          border-color: $gmailRed;
         }
       }
     }

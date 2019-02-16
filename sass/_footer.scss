@@ -1,26 +1,26 @@
 footer {
-  position: relative;
-  height: 15vh;
   @extend %column-flex-settings;
   justify-content: center;
-  background: rgb(43, 43, 48);
-  border-top: 1px solid white;
-  color: white;
+  position: relative;
+  height: 15vh;
+  color: $white;
+  background: $lightBlack;
+  border-top: 1px solid $darkGrey;
   overflow: hidden;
 
   h3 {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
   h5 {
-    font-size: 1rem;
     margin-top: 12.5px;
+    font-size: 0.75rem;
 
     a {
-      color: rgb(75, 77, 238);
+      color: $violet;
       text-decoration: none;
 
       &:hover {
-        color: rgb(66, 187, 243);
+        color: $lightBlue;
       }
     }
   }
@@ -28,10 +28,13 @@ footer {
 
 // -----------------Media Queries------------------------
 @media only screen and (min-width: 768px) {
-}
+  footer {
+    h3 {
+      font-size: 1.25rem;
+    }
 
-@media only screen and (min-width: 992px) {
-}
-
-@media only screen and (min-width: 1200px) {
+    h5 {
+      font-size: 1rem;
+    }
+  }
 }
