@@ -2,6 +2,7 @@
   @extend %column-flex-settings;
   justify-content: flex-start;
   background: transparent;
+  overflow: hidden;
 
   .nav-collapse {
     background: $grey;
@@ -35,9 +36,9 @@
     border-radius: 5px;
 
     a {
-      color: $white;
       margin: 5px 0;
       font-size: 1.5rem;
+      color: $white;
       text-decoration: none;
 
       &:hover {
@@ -63,21 +64,6 @@
 }
 
 // -----------------Media Queries------------------------
-@media only screen and (max-height: 480px) {
-  #nav {
-    .nav-items {
-      a {
-        font-size: 1rem;
-        margin: 2.5px 0;
-
-        &:hover {
-          font-size: 1.25rem;
-        }
-      }
-    }
-  }
-}
-
 @media only screen and (max-height: 600px) {
   #nav {
     .nav-items {
@@ -88,6 +74,28 @@
 
         &:hover {
           font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 480px) {
+  #nav {
+    .nav-collapse {
+      i {
+        font-size: 1.5rem;
+        padding: 15px 25px;
+      }
+    }
+
+    .nav-items {
+      a {
+        font-size: 1rem;
+        margin: 2.5px 0;
+
+        &:hover {
+          font-size: 1.25rem;
         }
       }
     }

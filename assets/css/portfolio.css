@@ -48,7 +48,8 @@ html {
     order: 2; } }
 #nav {
   justify-content: flex-start;
-  background: transparent; }
+  background: transparent;
+  overflow: hidden; }
   #nav .nav-collapse {
     background: #b1b0b0;
     border: 2px solid black;
@@ -69,9 +70,9 @@ html {
     background: black;
     border-radius: 5px; }
     #nav .nav-items a {
-      color: white;
       margin: 5px 0;
       font-size: 1.5rem;
+      color: white;
       text-decoration: none; }
       #nav .nav-items a:hover {
         color: #00a2ff;
@@ -85,12 +86,6 @@ html {
     opacity: 1;
     transition: 0.75s opacity ease-in-out 0.25s; }
 
-@media only screen and (max-height: 480px) {
-  #nav .nav-items a {
-    font-size: 1rem;
-    margin: 2.5px 0; }
-    #nav .nav-items a:hover {
-      font-size: 1.25rem; } }
 @media only screen and (max-height: 600px) {
   #nav .nav-items {
     width: 70%; }
@@ -98,6 +93,15 @@ html {
       font-size: 1.25rem; }
       #nav .nav-items a:hover {
         font-size: 1.5rem; } }
+@media only screen and (max-height: 480px) {
+  #nav .nav-collapse i {
+    font-size: 1.5rem;
+    padding: 15px 25px; }
+  #nav .nav-items a {
+    font-size: 1rem;
+    margin: 2.5px 0; }
+    #nav .nav-items a:hover {
+      font-size: 1.25rem; } }
 @media only screen and (min-width: 768px) {
   #nav {
     flex-direction: row;
