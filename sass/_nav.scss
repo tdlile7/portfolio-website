@@ -44,21 +44,56 @@
         color: $lightBlue;
         font-size: 1.75rem;
       }
+
+      i {
+        margin: 0 2.5px;
+      }
     }
   }
 
   .hide {
     opacity: 0;
-    transition: 0.5s all linear 0.5s;
+    transition: 0.5s opacity linear 0.25s;
   }
 
   .show {
     opacity: 1;
-    transition: 1s all ease-in-out 0.5s;
+    transition: 0.75s opacity ease-in-out 0.25s;
   }
 }
 
 // -----------------Media Queries------------------------
+@media only screen and (max-height: 480px) {
+  #nav {
+    .nav-items {
+      a {
+        font-size: 1rem;
+        margin: 2.5px 0;
+
+        &:hover {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  #nav {
+    .nav-items {
+      width: 70%;
+
+      a {
+        font-size: 1.25rem;
+
+        &:hover {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 768px) {
   #nav {
     flex-direction: row;
