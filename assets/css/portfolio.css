@@ -113,7 +113,7 @@ html {
       margin: 0;
       background: transparent; }
       #nav .nav-items a {
-        display: inline-block;
+        display: block;
         position: relative;
         margin: 0px 10px;
         padding: 10px 10px;
@@ -408,13 +408,13 @@ html {
             height: 70%;
             width: 100%;
             font-size: 1rem;
-            border: 1px solid #0909f5;
+            border: 1px solid black;
             border-radius: 7.5px;
             transition: all 0.3s;
             outline: none; }
             #projects .grid .grid-item .project-options a button:hover {
               color: white;
-              background: #2f83e4;
+              background: #1c7dec;
               cursor: pointer; }
     #projects .grid .grid-item:nth-child(1) {
       display: flex;

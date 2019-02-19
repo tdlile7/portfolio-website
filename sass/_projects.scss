@@ -1,7 +1,7 @@
 #projects {
   height: 100vh;
-  background: black;
-  border-top: 2px solid rgb(92, 92, 92);
+  background: $black;
+  border-top: 2px solid $darkGrey;
   overflow: hidden;
 
   .grid {
@@ -14,7 +14,7 @@
     .grid-item {
       @extend %column-flex-settings;
       display: none;
-      color: white;
+      color: $white;
 
       .project-options {
         @extend %default-flex-settings;
@@ -31,14 +31,14 @@
             height: 70%;
             width: 100%;
             font-size: 1rem;
-            border: 1px solid rgb(9, 9, 245);
+            border: 1px solid $black;
             border-radius: 7.5px;
             transition: all 0.3s;
             outline: none;
 
             &:hover {
-              color: white;
-              background: rgb(47, 131, 228);
+              color: $white;
+              background: $buttonBlue;
               cursor: pointer;
             }
           }
@@ -55,9 +55,9 @@
         margin-bottom: 10px;
         padding: 10px;
         font-size: 1.5rem;
-        color: white;
-        background: red;
-        border: 2px solid black;
+        color: $white;
+        background: $red;
+        border: 2px solid $black;
         border-radius: 25px;
       }
 
