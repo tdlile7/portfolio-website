@@ -67,6 +67,7 @@ html {
     height: 62.5%;
     width: 90%;
     margin-top: 10px;
+    margin-bottom: 2.5px;
     background: black;
     border-radius: 5px; }
     #nav .nav-items a {
@@ -268,7 +269,8 @@ html {
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 100vh;
+  max-height: 100vh;
+  min-height: 100vh;
   border-top: 2px solid #5c5c5c;
   overflow: hidden; }
   #about .background-image {
@@ -312,7 +314,7 @@ html {
       width: 90%;
       margin-top: 25px;
       padding: 15px;
-      font-size: 0.65rem;
+      font-size: 0.9rem;
       line-height: 15px;
       background: #ebeaea;
       border: 2px solid black;
@@ -335,6 +337,14 @@ html {
         background: white;
         border: 0.25px solid #1b1b1b; }
 
+@media only screen and (max-height: 690px) {
+  #about .description p {
+    font-size: 0.85rem;
+    line-height: 15px; } }
+@media only screen and (max-height: 600px) {
+  #about .description p {
+    font-size: 0.65rem;
+    line-height: 15px; } }
 @media only screen and (max-height: 475px) {
   #about .image h2 {
     font-size: 1.15rem;
@@ -351,8 +361,6 @@ html {
     min-height: 40%;
     margin-top: 30px;
     padding: 10px;
-    font-size: 0.65rem;
-    line-height: 15px;
     overflow: scroll; }
   #about .description h2 {
     font-size: 0.7rem; }
@@ -400,9 +408,7 @@ html {
       justify-content: center; }
       #about .description p {
         height: 40%;
-        width: 95%;
-        font-size: 1.15rem;
-        line-height: 25px; }
+        width: 95%; }
       #about .description ul {
         width: 80%; }
         #about .description ul li {

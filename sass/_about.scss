@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 100vh;
+  max-height: 100vh;
+  min-height: 100vh;
   border-top: 2px solid $darkGrey;
   overflow: hidden;
 
@@ -57,7 +58,7 @@
       width: 90%;
       margin-top: 25px;
       padding: 15px;
-      font-size: 0.65rem;
+      font-size: 0.9rem;
       line-height: 15px;
       background: $lightGrey;
       border: 2px solid $black;
@@ -90,6 +91,28 @@
 }
 
 // -----------------Media Queries------------------------
+@media only screen and (max-height: 690px) {
+  #about {
+    .description {
+      p {
+        font-size: 0.85rem;
+        line-height: 15px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  #about {
+    .description {
+      p {
+        font-size: 0.65rem;
+        line-height: 15px;
+      }
+    }
+  }
+}
+
 @media only screen and (max-height: 475px) {
   #about {
     .image {
@@ -116,8 +139,8 @@
         min-height: 40%;
         margin-top: 30px;
         padding: 10px;
-        font-size: 0.65rem;
-        line-height: 15px;
+        // font-size: 0.65rem;
+        // line-height: 15px;
         overflow: scroll;
       }
 
@@ -213,8 +236,6 @@
       p {
         height: 40%;
         width: 95%;
-        font-size: 1.15rem;
-        line-height: 25px;
       }
 
       ul {
