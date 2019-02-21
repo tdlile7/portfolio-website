@@ -269,8 +269,7 @@ html {
   display: flex;
   flex-direction: column;
   position: relative;
-  max-height: 100vh;
-  min-height: 100vh;
+  height: 100vh;
   border-top: 2px solid #5c5c5c;
   overflow: hidden; }
   #about .background-image {
