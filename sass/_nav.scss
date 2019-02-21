@@ -84,18 +84,49 @@
   #nav {
     .nav-collapse {
       i {
-        font-size: 1.5rem;
-        padding: 15px 25px;
+        font-size: 1rem;
+        padding: 12.5px 22.5px;
       }
     }
 
     .nav-items {
       a {
         font-size: 1rem;
-        margin: 2.5px 0;
+        margin: 3.5px 0;
 
         &:hover {
           font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 380px) {
+  #nav {
+    .nav-items {
+      a {
+        font-size: 0.8rem;
+        margin: 3px 0;
+
+        &:hover {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 300px) {
+  #nav {
+    .nav-items {
+      width: 50%;
+      a {
+        font-size: 0.6rem;
+        margin: 2px 0;
+
+        &:hover {
+          font-size: 0.8rem;
         }
       }
     }

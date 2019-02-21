@@ -57,15 +57,16 @@
       width: 90%;
       margin-top: 25px;
       padding: 15px;
-      font-size: 0.75rem;
-      line-height: 17.5px;
+      font-size: 0.65rem;
+      line-height: 15px;
       background: $lightGrey;
       border: 2px solid $black;
       border-radius: 20px;
     }
 
     h2 {
-      margin: 20px 0 0 0;
+      margin: 5px 0 0 0;
+      font-size: 0.9rem;
       color: $white;
       text-decoration: underline;
     }
@@ -78,16 +79,75 @@
       li {
         display: inline-block;
         margin: 1px -1px;
-        padding: 2.55px;
+        padding: 3px;
+        font-size: 0.85rem;
         color: $black;
         background: $white;
-        border: 1px solid $lightBlack;
+        border: 0.25px solid $lightBlack;
       }
     }
   }
 }
 
 // -----------------Media Queries------------------------
+@media only screen and (max-height: 475px) {
+  #about {
+    .image {
+      h2 {
+        font-size: 1.15rem;
+        padding: 10px;
+        border: 3px solid $white;
+      }
+
+      i {
+        display: none;
+      }
+
+      img {
+        height: 70%;
+        margin-top: 7.5px;
+        border: 2px solid $black;
+      }
+    }
+
+    .description {
+      p {
+        max-height: 45%;
+        min-height: 40%;
+        margin-top: 30px;
+        padding: 10px;
+        font-size: 0.65rem;
+        line-height: 15px;
+        overflow: scroll;
+      }
+
+      h2 {
+        font-size: 0.7rem;
+      }
+
+      ul {
+        li {
+          padding: 3px;
+          font-size: 0.65rem;
+          border: 0.25px solid $lightBlack;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  #about {
+    .description {
+      ul {
+        li {
+          font-size: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 500px) {
   #about {
     .description {
@@ -95,28 +155,20 @@
         font-size: 0.85rem;
         line-height: 20px;
       }
-    }
-  }
-}
-
-@media only screen and (max-height: 520px) {
-  #about {
-    .description {
-      p {
-        margin-top: 30px;
-        padding: 10px;
-        font-size: 0.65rem;
-        line-height: 15px;
-      }
 
       h2 {
-        margin: 5px 0 0 0;
-        font-size: 0.9rem;
+        margin: 20px 0 0 0;
+        font-size: 1.25rem;
       }
+
       ul {
+        margin-top: 10px;
+
         li {
-          padding: 0.85px;
-          border: 0.25px solid $lightBlack;
+          margin: 1px -1px;
+          padding: 2.55px;
+          font-size: 1rem;
+          border: 1px solid $lightBlack;
         }
       }
     }
@@ -134,7 +186,7 @@
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 830px) {
   #about {
     flex-direction: row;
 

@@ -27,6 +27,19 @@ footer {
 }
 
 // -----------------Media Queries------------------------
+@media only screen and (max-height: 350px) {
+  footer {
+    h3 {
+      font-size: 0.8rem;
+    }
+
+    h5 {
+      margin-top: 5px;
+      font-size: 0.6rem;
+    }
+  }
+}
+
 @media only screen and (min-width: 768px) {
   footer {
     h3 {

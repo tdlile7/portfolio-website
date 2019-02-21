@@ -88,6 +88,32 @@
 }
 
 // -----------------Media Queries------------------------
+@media only screen and (max-height: 400px) {
+  #landing-content {
+    h2 {
+      font-size: 1.25rem;
+    }
+
+    #social-media {
+      a {
+        i {
+          padding: 15px;
+          font-size: 1.25rem;
+          border: 1px solid $white;
+
+          &:hover {
+            font-size: 1.75rem;
+          }
+        }
+
+        .fa-facebook-f {
+          padding: 15px 22.5px;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 768px) {
   #landing-content {
     justify-content: center;

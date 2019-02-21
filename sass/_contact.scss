@@ -96,6 +96,48 @@
   }
 }
 
+// -----------------Media Queries------------------------
+@media only screen and (max-height: 380px) {
+  #contact {
+    form {
+      .header {
+        height: 15%;
+
+        h2 {
+          font-size: 1.25rem;
+        }
+
+        i {
+          margin: 0 0 0 5px;
+          font-size: 1.5rem;
+        }
+      }
+
+      input {
+        height: 5%;
+        width: 60%;
+
+        &:focus {
+          border: 2px solid $lightBlack;
+        }
+      }
+
+      textarea {
+        height: 30%;
+
+        &:focus {
+          border: 2px solid $lightBlack;
+        }
+      }
+
+      button {
+        height: 15%;
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 992px) {
   #contact {
     form {
