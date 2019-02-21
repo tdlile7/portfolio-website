@@ -539,7 +539,7 @@ html {
     height: 100%;
     width: 80%; }
     #contact form .header {
-      height: 20%;
+      height: 15%;
       width: 100%; }
       #contact form .header h2 {
         margin: 0;
@@ -588,13 +588,11 @@ html {
         cursor: pointer; }
 
 @media only screen and (max-height: 380px) {
-  #contact form .header {
-    height: 15%; }
-    #contact form .header h2 {
-      font-size: 1.25rem; }
-    #contact form .header i {
-      margin: 0 0 0 5px;
-      font-size: 1.5rem; }
+  #contact form .header h2 {
+    font-size: 1.25rem; }
+  #contact form .header i {
+    margin: 0 0 0 5px;
+    font-size: 1.5rem; }
   #contact form input {
     height: 5%;
     width: 60%; }
