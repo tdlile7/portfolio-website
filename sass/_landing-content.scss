@@ -1,6 +1,7 @@
 #landing-content {
   @extend %column-flex-settings;
   justify-content: flex-end;
+  height: 45vh;
 
   .background-image {
     opacity: 0.85;
@@ -117,6 +118,7 @@
 @media only screen and (min-width: 768px) {
   #landing-content {
     justify-content: center;
+    height: 80vh;
 
     h2 {
       font-size: 2rem;

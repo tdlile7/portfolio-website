@@ -5,14 +5,14 @@
   overflow: hidden;
 
   #nav {
-    height: 55vh;
+    max-height: 55vh;
     width: 100vw;
     order: 2;
     overflow: hidden;
   }
 
   #landing-content {
-    height: 45vh;
+    max-height: 45vh;
     width: 100vw;
     order: 1;
     overflow: hidden;
@@ -23,12 +23,12 @@
 @media only screen and (min-width: 768px) {
   #landing {
     #nav {
-      height: 20vh;
+      max-height: 20vh;
       order: 1;
     }
 
     #landing-content {
-      height: 80vh;
+      max-height: 80vh;
       order: 2;
     }
   }

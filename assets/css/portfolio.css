@@ -27,25 +27,26 @@ html {
   max-width: 100vw;
   overflow: hidden; }
   #landing #nav {
-    height: 55vh;
+    max-height: 55vh;
     width: 100vw;
     order: 2;
     overflow: hidden; }
   #landing #landing-content {
-    height: 45vh;
+    max-height: 45vh;
     width: 100vw;
     order: 1;
     overflow: hidden; }
 
 @media only screen and (min-width: 768px) {
   #landing #nav {
-    height: 20vh;
+    max-height: 20vh;
     order: 1; }
   #landing #landing-content {
-    height: 80vh;
+    max-height: 80vh;
     order: 2; } }
 #nav {
   justify-content: flex-start;
+  height: 55vh;
   background: transparent;
   overflow: hidden; }
   #nav .nav-collapse {
@@ -119,7 +120,8 @@ html {
   #nav {
     flex-direction: row;
     justify-content: center;
-    align-items: flex-end; }
+    align-items: flex-end;
+    height: 20vh; }
     #nav .nav-collapse {
       display: none; }
     #nav .nav-items {
@@ -172,7 +174,8 @@ html {
     #nav .nav-items a:hover {
       font-size: 2rem; } }
 #landing-content {
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  height: 45vh; }
   #landing-content .background-image {
     opacity: 0.85;
     position: absolute;
@@ -242,7 +245,8 @@ html {
     padding: 15px 22.5px; } }
 @media only screen and (min-width: 768px) {
   #landing-content {
-    justify-content: center; }
+    justify-content: center;
+    height: 80vh; }
     #landing-content h2 {
       font-size: 2rem; }
     #landing-content #social-media a i {
