@@ -46,8 +46,7 @@ html {
     order: 2; } }
 #nav {
   justify-content: flex-start;
-  background: transparent;
-  overflow: hidden; }
+  background: transparent; }
   #nav .nav-collapse {
     background: #b1b0b0;
     border: 2px solid black;
@@ -62,6 +61,7 @@ html {
       #nav .nav-collapse i:hover {
         cursor: pointer; }
   #nav .nav-items {
+    display: none;
     height: 62.5%;
     width: 90%;
     margin-top: 10px;

@@ -2,7 +2,6 @@
   @extend %column-flex-settings;
   justify-content: flex-start;
   background: transparent;
-  overflow: hidden;
 
   .nav-collapse {
     background: $grey;
@@ -28,6 +27,7 @@
   }
 
   .nav-items {
+    display: none;
     @extend %column-flex-settings;
     height: 62.5%;
     width: 90%;
