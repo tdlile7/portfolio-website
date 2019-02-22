@@ -1,7 +1,6 @@
 #nav {
   @extend %column-flex-settings;
   justify-content: flex-start;
-  // background: transparent;
 
   .nav-collapse {
     background: $grey;

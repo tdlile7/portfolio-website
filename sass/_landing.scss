@@ -1,16 +1,18 @@
 #landing {
+  height: 100vh;
+  width: 100vw;
   @extend %column-flex-settings;
 
   #nav {
-    height: 55vh;
-    width: 100vw;
+    height: 55%;
+    width: 100%;
     order: 2;
     overflow: hidden;
   }
 
   #landing-content {
-    height: 45vh;
-    width: 100vw;
+    height: 45%;
+    width: 100%;
     order: 1;
     overflow: hidden;
   }
@@ -20,8 +22,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     background-image: url("images/landing.jpg");
     background-size: cover;
     z-index: -1;
@@ -32,12 +34,12 @@
 @media only screen and (min-width: 768px) {
   #landing {
     #nav {
-      height: 20vh;
+      height: 20%;
       order: 1;
     }
 
     #landing-content {
-      height: 80vh;
+      height: 80%;
       order: 2;
     }
   }
