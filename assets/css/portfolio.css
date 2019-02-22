@@ -94,7 +94,8 @@ html {
         font-size: 1.5rem; } }
 @media only screen and (max-height: 480px) {
   #nav .nav-collapse i {
-    font-size: 1rem; }
+    font-size: 1rem;
+    padding: 12.5px 22.5px; }
   #nav .nav-items a {
     font-size: 1rem;
     margin: 3.5px 0; }
