@@ -22,16 +22,10 @@ html {
   background: black;
   scroll-behavior: smooth; }
 
-#portfolio > div {
-  max-height: 100vh;
-  max-width: 100vw;
-  overflow: hidden; }
-
 #landing {
-  max-height: 100vh;
-  max-width: 100vw;
   overflow: hidden; }
   #landing #nav {
+    display: none;
     height: 55vh;
     width: 100vw;
     order: 2;
@@ -44,6 +38,7 @@ html {
 
 @media only screen and (min-width: 768px) {
   #landing #nav {
+    display: none;
     height: 20vh;
     order: 1; }
   #landing #landing-content {
