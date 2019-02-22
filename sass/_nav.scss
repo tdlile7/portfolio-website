@@ -18,7 +18,7 @@
 
     i {
       font-size: 2rem;
-      padding: 20px 30px;
+      // padding: 20px 30px;
 
       &:hover {
         cursor: pointer;
@@ -27,7 +27,6 @@
   }
 
   .nav-items {
-    display: none;
     @extend %column-flex-settings;
     height: 62.5%;
     width: 90%;
@@ -86,7 +85,7 @@
     .nav-collapse {
       i {
         font-size: 1rem;
-        padding: 12.5px 22.5px;
+        // padding: 12.5px 22.5px;
       }
     }
 
@@ -156,7 +155,7 @@
         display: block;
         position: relative;
         margin: 0px 10px;
-        padding: 10px 10px;
+        // padding: 10px 10px;
         cursor: pointer;
 
         &:hover {
