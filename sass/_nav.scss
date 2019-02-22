@@ -18,7 +18,7 @@
 
     i {
       font-size: 2rem;
-      // padding: 20px 30px;
+      padding: 20px 30px;
 
       &:hover {
         cursor: pointer;
@@ -30,13 +30,13 @@
     @extend %column-flex-settings;
     height: 62.5%;
     width: 90%;
-    margin-top: 10px;
-    margin-bottom: 2.5px;
+    // margin-top: 10px;
+    // margin-bottom: 2.5px;
     background: $black;
     border-radius: 5px;
 
     a {
-      margin: 5px 0;
+      // margin: 5px 0;
       font-size: 1.5rem;
       color: $white;
       text-decoration: none;
@@ -47,7 +47,7 @@
       }
 
       i {
-        margin: 0 2.5px;
+        // margin: 0 2.5px;
       }
     }
   }
@@ -92,7 +92,7 @@
     .nav-items {
       a {
         font-size: 1rem;
-        margin: 3.5px 0;
+        // margin: 3.5px 0;
 
         &:hover {
           font-size: 1.25rem;
@@ -107,7 +107,7 @@
     .nav-items {
       a {
         font-size: 0.8rem;
-        margin: 3px 0;
+        // margin: 3px 0;
 
         &:hover {
           font-size: 1rem;
@@ -123,7 +123,7 @@
       width: 50%;
       a {
         font-size: 0.6rem;
-        margin: 2px 0;
+        // margin: 2px 0;
 
         &:hover {
           font-size: 0.8rem;
@@ -148,14 +148,14 @@
       align-items: flex-end;
       height: 100%;
       width: 100%;
-      margin: 0;
+      // margin: 0;
       background: transparent;
 
       a {
         display: block;
         position: relative;
-        margin: 0px 10px;
-        // padding: 10px 10px;
+        // margin: 0px 10px;
+        padding: 10px 10px;
         cursor: pointer;
 
         &:hover {
