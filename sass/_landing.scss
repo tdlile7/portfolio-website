@@ -1,8 +1,5 @@
 #landing {
-  max-height: 100vh;
-  max-width: 100vw;
   @extend %column-flex-settings;
-  overflow: hidden;
 
   #nav {
     height: 55vh;
@@ -16,6 +13,18 @@
     width: 100vw;
     order: 1;
     overflow: hidden;
+  }
+
+  .background-image {
+    opacity: 0.85;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("images/landing.jpg");
+    background-size: cover;
+    z-index: -1;
   }
 }
 

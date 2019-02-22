@@ -22,20 +22,26 @@ html {
   background: black;
   scroll-behavior: smooth; }
 
-#landing {
-  max-height: 100vh;
-  max-width: 100vw;
+#landing #nav {
+  height: 55vh;
+  width: 100vw;
+  order: 2;
   overflow: hidden; }
-  #landing #nav {
-    height: 55vh;
-    width: 100vw;
-    order: 2;
-    overflow: hidden; }
-  #landing #landing-content {
-    height: 45vh;
-    width: 100vw;
-    order: 1;
-    overflow: hidden; }
+#landing #landing-content {
+  height: 45vh;
+  width: 100vw;
+  order: 1;
+  overflow: hidden; }
+#landing .background-image {
+  opacity: 0.85;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("images/landing.jpg");
+  background-size: cover;
+  z-index: -1; }
 
 @media only screen and (min-width: 768px) {
   #landing #nav {
@@ -45,9 +51,7 @@ html {
     height: 80vh;
     order: 2; } }
 #nav {
-  justify-content: flex-start;
-  background: transparent;
-  background: red; }
+  justify-content: flex-start; }
   #nav .nav-collapse {
     background: #b1b0b0;
     border: 2px solid black;
@@ -173,16 +177,6 @@ html {
       font-size: 2rem; } }
 #landing-content {
   justify-content: flex-end; }
-  #landing-content .background-image {
-    opacity: 0.85;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-image: url("images/landing.jpg");
-    background-size: cover;
-    z-index: -1; }
   #landing-content h2 {
     margin: none;
     color: white;
