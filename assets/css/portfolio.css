@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center; }
 
-#landing, #nav, #nav .nav-items, #landing-content, #about .image, #projects .grid .grid-item, footer {
+#landing, #nav, #nav .nav-items, #landing-content, #about .image, #projects .grid .grid-item, #footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,31 +22,35 @@ html {
   background: black;
   scroll-behavior: smooth; }
 
+#portfolio > div {
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden; }
+
 #landing {
   max-height: 100vh;
   max-width: 100vw;
   overflow: hidden; }
   #landing #nav {
-    max-height: 55vh;
+    height: 55vh;
     width: 100vw;
     order: 2;
     overflow: hidden; }
   #landing #landing-content {
-    max-height: 45vh;
+    height: 45vh;
     width: 100vw;
     order: 1;
     overflow: hidden; }
 
 @media only screen and (min-width: 768px) {
   #landing #nav {
-    max-height: 20vh;
+    height: 20vh;
     order: 1; }
   #landing #landing-content {
-    max-height: 80vh;
+    height: 80vh;
     order: 2; } }
 #nav {
   justify-content: flex-start;
-  height: 55vh;
   background: transparent;
   overflow: hidden; }
   #nav .nav-collapse {
@@ -120,8 +124,7 @@ html {
   #nav {
     flex-direction: row;
     justify-content: center;
-    align-items: flex-end;
-    height: 20vh; }
+    align-items: flex-end; }
     #nav .nav-collapse {
       display: none; }
     #nav .nav-items {
@@ -174,8 +177,7 @@ html {
     #nav .nav-items a:hover {
       font-size: 2rem; } }
 #landing-content {
-  justify-content: flex-end;
-  height: 45vh; }
+  justify-content: flex-end; }
   #landing-content .background-image {
     opacity: 0.85;
     position: absolute;
@@ -245,8 +247,7 @@ html {
     padding: 15px 22.5px; } }
 @media only screen and (min-width: 768px) {
   #landing-content {
-    justify-content: center;
-    height: 80vh; }
+    justify-content: center; }
     #landing-content h2 {
       font-size: 2rem; }
     #landing-content #social-media a i {
@@ -635,7 +636,7 @@ html {
     width: 65%; }
   #contact form button {
     width: 20%; } }
-footer {
+#footer {
   justify-content: center;
   position: relative;
   height: 15vh;
@@ -643,27 +644,27 @@ footer {
   background: #1b1b1b;
   border-top: 1px solid #5c5c5c;
   overflow: hidden; }
-  footer h3 {
+  #footer h3 {
     font-size: 1rem; }
-  footer h5 {
+  #footer h5 {
     margin-top: 12.5px;
     font-size: 0.75rem; }
-    footer h5 a {
-      color: #4b4dee;
+    #footer h5 a {
+      color: #0080f8;
       text-decoration: none; }
-      footer h5 a:hover {
+      #footer h5 a:hover {
         color: #00a2ff; }
 
 @media only screen and (max-height: 350px) {
-  footer h3 {
+  #footer h3 {
     font-size: 0.8rem; }
-  footer h5 {
+  #footer h5 {
     margin-top: 5px;
     font-size: 0.6rem; } }
 @media only screen and (min-width: 768px) {
-  footer h3 {
+  #footer h3 {
     font-size: 1.25rem; }
-  footer h5 {
+  #footer h5 {
     font-size: 1rem; } }
 
 /*# sourceMappingURL=portfolio.css.map */
