@@ -2,8 +2,8 @@ const navItems = document.querySelector(".nav-items");
 const navBtn = document.querySelector(".nav-collapse");
 const loader = document.getElementById("loading-container");
 
-//Removes preloader after the rest of the window has loaded
-window.onload = function myFunction() {
+//Remove preloader after rest of the site's content has been loaded
+window.onload = function() {
   loader.style.display = "none";
 };
 
