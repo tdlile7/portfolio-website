@@ -1,4 +1,4 @@
-#landing-content #social-media, #projects .grid .grid-item .project-options, #contact, #contact form .header {
+#loading-container, #landing-content #social-media, #projects .grid .grid-item .project-options, #contact, #contact form .header {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -18,10 +18,33 @@
 
 html {
   font: normal 16px "Lato", sans-serif;
-  color: #555;
   background: black;
   scroll-behavior: smooth; }
 
+#loading-container {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  background: black;
+  z-index: 1; }
+  #loading-container .loader {
+    border: 16px solid white;
+    border-radius: 50%;
+    border-top: 16px solid #0080f8;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite; }
+
+@keyframes spin {
+  0% {
+    webkit-transform: rotate(0deg);
+    ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    webkit-transform: rotate(360deg);
+    ms-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 #landing {
   height: 100vh;
   width: 100vw; }

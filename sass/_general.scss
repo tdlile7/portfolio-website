@@ -7,7 +7,34 @@
 
 html {
   font: normal 16px "Lato", sans-serif;
-  color: #555;
-  background: black;
+  background: $black;
   scroll-behavior: smooth;
+}
+
+#loading-container {
+  @extend %default-flex-settings;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  color: $white;
+  background: $black;
+  z-index: 1;
+
+  .loader {
+    border: 16px solid $white;
+    border-radius: 50%;
+    border-top: 16px solid $blue;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    @include transform(rotate(0deg));
+  }
+  100% {
+    @include transform(rotate(360deg));
+  }
 }
