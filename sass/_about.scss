@@ -45,14 +45,38 @@
   }
 
   .description {
-    flex: 1.5;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
     color: $lightBlack;
 
-    p {
+    #list {
+      width: 90%;
+      margin-top: 10px;
+      list-style-type: none;
+      background: $white;
+      border: 3px solid $black;
+      border-radius: 5px;
+      overflow: hidden;
+
+      li {
+        display: block;
+        padding: 4px;
+        margin: 5px 0;
+        font-size: 0.95rem;
+        font-weight: bold;
+        color: $black;
+
+        &:before {
+          content: ">";
+          margin: 0 2px;
+        }
+      }
+    }
+
+    #paragraph {
       height: 45%;
       width: 90%;
       margin-top: 25px;
@@ -62,6 +86,7 @@
       background: $lightGrey;
       border: 2px solid $black;
       border-radius: 20px;
+      display: none;
     }
 
     h2 {
@@ -71,7 +96,7 @@
       text-decoration: underline;
     }
 
-    ul {
+    #skills {
       width: 90%;
       margin-top: 10px;
       list-style-type: none;
@@ -79,7 +104,7 @@
       li {
         display: inline-block;
         margin: 1px -1px;
-        padding: 3px;
+        padding: 3.5px;
         font-size: 0.85rem;
         color: $black;
         background: $white;
@@ -90,29 +115,52 @@
 }
 
 // -----------------Media Queries------------------------
-@media only screen and (max-height: 690px) {
+@media only screen and (max-height: 680px) {
   #about {
     .description {
-      p {
-        font-size: 0.85rem;
-        line-height: 15px;
+      #list {
+        li {
+          padding: 3px;
+          font-size: 0.8rem;
+        }
       }
     }
   }
 }
 
-@media only screen and (max-height: 600px) {
+@media only screen and (max-height: 620px) {
   #about {
     .description {
-      p {
-        font-size: 0.65rem;
-        line-height: 15px;
+      #list {
+        li {
+          padding: 2.5px;
+        }
+      }
+
+      #skills {
+        li {
+          padding: 3px;
+          font-size: 0.7rem;
+        }
       }
     }
   }
 }
 
-@media only screen and (max-height: 475px) {
+@media only screen and (max-height: 540px) {
+  #about {
+    .description {
+      #list {
+        li {
+          padding: 2.5px;
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 490px) {
   #about {
     .image {
       h2 {
@@ -121,37 +169,57 @@
         border: 3px solid $white;
       }
 
-      i {
-        display: none;
-      }
-
       img {
-        height: 70%;
-        margin-top: 7.5px;
         border: 2px solid $black;
       }
     }
 
     .description {
-      p {
-        max-height: 45%;
-        min-height: 40%;
-        margin-top: 30px;
-        padding: 10px;
-        // font-size: 0.65rem;
-        // line-height: 15px;
-        overflow: scroll;
-      }
-
       h2 {
         font-size: 0.7rem;
       }
 
-      ul {
+      #skills {
         li {
-          padding: 3px;
           font-size: 0.65rem;
-          border: 0.25px solid $lightBlack;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 465px) {
+  #about {
+    .description {
+      flex: 1.5;
+
+      #list {
+        width: 80%;
+
+        li {
+          padding: 2.5px;
+          font-size: 0.65rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 430px) {
+  #about {
+    .image {
+      img {
+        height: 65%;
+      }
+    }
+
+    .description {
+      #list {
+        margin-top: 20px;
+
+        li {
+          padding: 2px;
+          font-size: 0.6rem;
         }
       }
     }
@@ -161,7 +229,16 @@
 @media only screen and (max-height: 400px) {
   #about {
     .description {
-      ul {
+      #list {
+        margin-top: 25px;
+
+        li {
+          padding: 2px;
+          font-size: 0.55rem;
+        }
+      }
+
+      #skills {
         li {
           font-size: 0.5rem;
         }
@@ -170,20 +247,51 @@
   }
 }
 
+@media only screen and (max-height: 380px) {
+  #about {
+    .description {
+      #list {
+        margin-top: 25px;
+
+        li {
+          padding: 2px;
+          font-size: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 340px) {
+  #about {
+    .description {
+      #list {
+        width: 60%;
+
+        margin-top: 30px;
+
+        li {
+          padding: 1px;
+          font-size: 0.45rem;
+        }
+      }
+
+      #skills {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 500px) {
   #about {
     .description {
-      p {
-        font-size: 0.85rem;
-        line-height: 20px;
-      }
-
       h2 {
-        margin: 20px 0 0 0;
+        margin: 2.5px 0 0 0;
         font-size: 1.25rem;
       }
 
-      ul {
+      #skills {
         margin-top: 10px;
 
         li {
@@ -197,12 +305,83 @@
   }
 }
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-height: 690px) {
+  #about {
+    .image {
+      img {
+        height: 52.5%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 620px) {
   #about {
     .description {
-      p {
-        font-size: 1rem;
+      #list {
+        display: none;
+      }
+
+      #paragraph {
+        display: block;
+        font-size: 0.8rem;
         line-height: 22.5px;
+      }
+
+      h2 {
+        margin: 7.5px 0 0 0;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-height: 900px) and (max-height: 1100px) {
+  #about {
+    .image {
+      h2 {
+        font-size: 2.5rem;
+        margin-top: 30px;
+        padding: 25px;
+        border: 5px solid $white;
+      }
+
+      img {
+        height: 60%;
+      }
+    }
+
+    .description {
+      flex: 1.5;
+
+      #paragraph {
+        font-size: 1.5rem;
+        line-height: 30px;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      #skills {
+        margin-top: 10px;
+
+        li {
+          margin: 1.5px 1px;
+          padding: 5px;
+          font-size: 1.75rem;
+          border: 1px solid $lightBlack;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 770px) {
+  #about {
+    .description {
+      #paragraph {
+        font-size: 1rem;
       }
     }
   }
@@ -225,23 +404,38 @@
       }
 
       img {
-        height: 25%;
-        width: 85%;
+        height: 30%;
+        width: 95%;
       }
     }
 
     .description {
+      flex: 1.5;
       justify-content: center;
-      p {
+
+      #paragraph {
         height: 40%;
         width: 95%;
+        line-height: 25px;
       }
 
-      ul {
+      #skills {
         width: 80%;
         li {
           padding: 10px;
         }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  #about {
+    .description {
+      #paragraph {
+        padding: 12.5px;
+        font-size: 1.15rem;
+        line-height: 27.5px;
       }
     }
   }
@@ -259,20 +453,20 @@
       }
 
       img {
-        width: 85%;
+        height: 40%;
       }
     }
 
     .description {
-      p {
-        font-size: 1.15rem;
-        line-height: 25px;
+      #paragraph {
+        font-size: 1.25rem;
+        line-height: 27.5px;
       }
     }
   }
 }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-height: 750px) and (max-height: 899px) {
   #about {
     .image {
       img {
@@ -281,7 +475,17 @@
     }
 
     .description {
-      p {
+      #paragraph {
+        line-height: 32.5px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  #about {
+    .description {
+      #paragraph {
         font-size: 1.2rem;
         line-height: 30px;
       }
@@ -289,7 +493,17 @@
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1180px) {
+  #about {
+    .description {
+      #paragraph {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1230px) {
   #about {
     .image {
       h2 {
@@ -299,20 +513,14 @@
       i {
         font-size: 6rem;
       }
-
-      img {
-        height: 35%;
-        width: 95%;
-      }
     }
 
     .description {
-      p {
-        height: 35%;
-        font-size: 1.25rem;
+      #paragraph {
+        line-height: 35px;
       }
 
-      ul {
+      #skills {
         li {
           padding: 15px;
         }
@@ -326,6 +534,33 @@
     .image {
       img {
         height: 42.5%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1400px) and (min-height: 600px) {
+  #about {
+    .description {
+      #paragraph {
+        font-size: 1.25rem;
+        line-height: 39.5px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1400px) and (min-height: 695px) {
+  #about {
+    .description {
+      #paragraph {
+        font-size: 1.5rem;
+      }
+
+      #skills {
+        li {
+          font-size: 1.25rem;
+        }
       }
     }
   }
