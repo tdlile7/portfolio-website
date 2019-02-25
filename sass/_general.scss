@@ -20,27 +20,21 @@ html {
   z-index: 1;
 
   .loader {
-    @extend %default-flex-settings;
-    color: $white;
-    font-weight: bold;
-    font-size: 2em;
-    width: 400px;
-    height: 400px;
-    border: 5px solid $black;
+    width: 250px;
+    height: 250px;
+    border: 16px solid $white;
+    border-top: 16px solid $blue;
     border-radius: 50%;
-    @include animation(borderScale 1s infinite ease-in-out);
+    @include animation(spin 1s linear infinite);
   }
 }
 
 // --------Keyframes----------------
-@keyframes borderScale {
+@keyframes spin {
   0% {
-    border: 5px solid $white;
-  }
-  50% {
-    border: 25px solid $black;
+    @include transform(rotate(0deg));
   }
   100% {
-    border: 5px solid $white;
+    @include transform(rotate(360deg));
   }
 }
