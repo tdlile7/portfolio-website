@@ -5,6 +5,11 @@
   transform: $property;
 }
 
+@mixin animation($property) {
+  webkit-animation: $property;
+  animation: $property;
+}
+
 // -----------------Variables---------------------------
 $black: black;
 $lightBlack: rgb(27, 27, 27);
