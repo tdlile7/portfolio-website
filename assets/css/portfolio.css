@@ -1,4 +1,4 @@
-#loading-container, #loading-container .loader, #landing-content #social-media, #projects .grid .grid-item .project-options, #contact, #contact form .header {
+#loading-container, #landing-content #social-media, #projects .grid .grid-item .project-options, #contact, #contact form .header {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -28,23 +28,23 @@ html {
   background: black;
   z-index: 1; }
   #loading-container .loader {
-    color: white;
-    font-weight: bold;
-    font-size: 2em;
-    width: 400px;
-    height: 400px;
-    border: 5px solid black;
+    width: 250px;
+    height: 250px;
+    border: 16px solid white;
+    border-top: 16px solid #0080f8;
     border-radius: 50%;
-    webkit-animation: borderScale 1s infinite ease-in-out;
-    animation: borderScale 1s infinite ease-in-out; }
+    webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite; }
 
-@keyframes borderScale {
+@keyframes spin {
   0% {
-    border: 5px solid white; }
-  50% {
-    border: 25px solid black; }
+    webkit-transform: rotate(0deg);
+    ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
   100% {
-    border: 5px solid white; } }
+    webkit-transform: rotate(360deg);
+    ms-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 #landing {
   height: 100vh;
   width: 100vw; }
